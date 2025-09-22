@@ -6,7 +6,7 @@
 /*   By: apregitz <apregitz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/22 21:12:47 by apregitz          #+#    #+#             */
-/*   Updated: 2025/09/22 21:55:57 by apregitz         ###   ########.fr       */
+/*   Updated: 2025/09/22 22:12:09 by apregitz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,6 @@ int	main(int ac, char **av)
 		std::cout << "* LOUD AND UNBEARABLE FEEDBACK NOISE *" << std::endl;
 		return (0);
 	}
-	std::string result;
 	for (int i = 1; i < ac; i++)
 	{
 		std::string	str = av[i];
@@ -29,8 +28,8 @@ int	main(int ac, char **av)
 			if (std::islower(c))
 				c = c & ~' ';
 		}
-		result += str;
+		std::cout << str;
 	}
-	std::cout << result << std::endl;
+	std::cout << std::endl;
 	return (0);
 }
