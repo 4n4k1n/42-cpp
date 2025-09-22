@@ -1,7 +1,7 @@
 CXX := c++
 CXXFLAGS := -Wall -Wextra -Werror -std=c++17
 
-SRC := megaphone.cpp
+SRC := src/megaphone.cpp
 OBJ := $(SRC:.cpp=.o)
 BIN := megaphone
 
