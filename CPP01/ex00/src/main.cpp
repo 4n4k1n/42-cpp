@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: anakin <anakin@student.42.fr>              +#+  +:+       +#+        */
+/*   By: apregitz <apregitz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/24 10:34:06 by anakin            #+#    #+#             */
-/*   Updated: 2025/09/24 10:37:42 by anakin           ###   ########.fr       */
+/*   Updated: 2025/09/24 13:51:00 by apregitz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,4 +19,5 @@ int	main(void)
 	delete zombie;
 	
 	randomChump("Tom");
+	return (0);
 }

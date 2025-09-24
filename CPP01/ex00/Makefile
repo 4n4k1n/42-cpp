@@ -1,13 +1,17 @@
 CXX := c++
-CXXFLAGS := -Wall -Wextra -Werror -std=c++17
+CXXFLAGS := -Wall -Wextra -Werror -std=c++17 -Iinc
 
 VPATH := src
 vpath %.cpp src
 
-SRC := megaphone.cpp
+SRC := main.cpp \
+		newZombie.cpp \
+		randomChump.cpp \
+		Zombie.cpp
+
 OBJDIR := obj
 OBJ := $(addprefix $(OBJDIR)/,$(SRC:.cpp=.o))
-BIN := megaphone
+BIN := zombie
 
 all: $(BIN)
 
