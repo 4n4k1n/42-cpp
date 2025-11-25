@@ -6,7 +6,8 @@ CXXFLAGS := -Wall -Wextra -Werror -std=c++17 -Iinc
 VPATH := src
 vpath %.cpp src
 
-SRC :=	main.cpp \
+SRC :=	tests.cpp \
+		Accoutn.cpp
 
 OBJDIR := obj
 OBJ := $(addprefix $(OBJDIR)/,$(SRC:.cpp=.o))
