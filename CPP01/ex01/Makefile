@@ -1,16 +1,14 @@
 MAKEFLAGS += -s
 
 CXX := c++
-CXXFLAGS := -Wall -Wextra -Werror -std=c++17 -Iinc
+CXXFLAGS := -Wall -Wextra -Werror -std=c++17 -Iinc -fsanitize=address -g
 
 VPATH := src
 vpath %.cpp src
 
 SRC :=	main.cpp \
 		Zombie.cpp \
-		newZombie.cpp \
-		randomChump.cpp
-
+		zombieHorde.cpp
 OBJDIR := obj
 OBJ := $(addprefix $(OBJDIR)/,$(SRC:.cpp=.o))
 BIN := program
