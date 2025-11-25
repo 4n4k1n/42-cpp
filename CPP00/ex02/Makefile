@@ -7,7 +7,7 @@ VPATH := src
 vpath %.cpp src
 
 SRC :=	tests.cpp \
-		Accoutn.cpp
+		Account.cpp
 
 OBJDIR := obj
 OBJ := $(addprefix $(OBJDIR)/,$(SRC:.cpp=.o))
