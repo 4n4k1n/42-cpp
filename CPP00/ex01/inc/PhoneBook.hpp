@@ -3,12 +3,12 @@
 #include <Contact.hpp>
 #include <cstdint>
 
-#define MAX_CONTACS 8
+#define MAX_CONTACTS 8
 
 class PhoneBook
 {
     private:
-        Contact	_contacts[MAX_CONTACS];
+        Contact	_contacts[MAX_CONTACTS];
         uint32_t _index = 0;
     public:
         PhoneBook() = default;

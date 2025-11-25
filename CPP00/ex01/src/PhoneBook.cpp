@@ -33,12 +33,12 @@ void	PhoneBook::add_contact(void)
     _contacts[_index].set_nickname(get_input("Enter nickname: "));
     _contacts[_index].set_phone_number(get_input("Enter phone number: "));
     _contacts[_index].set_darkest_secret(get_input("Enter darkest secret: "));
-    _index = _index == MAX_CONTACS - 1 ? 0 : _index + 1;
+    _index = _index == MAX_CONTACTS - 1 ? 0 : _index + 1;
 }
 
 void PhoneBook::display_contacts() const
 {
-    for (uint32_t i = 0; i < MAX_CONTACS; ++i)
+    for (uint32_t i = 0; i < MAX_CONTACTS; ++i)
     {
         if (!was_used(_contacts[i].get_first_name()))
             continue;
@@ -52,7 +52,7 @@ void PhoneBook::display_contacts() const
 
 bool	PhoneBook::print_contact(uint32_t id) const
 {
-    if (id >= MAX_CONTACS || !was_used(_contacts[id].get_first_name()))
+    if (id >= MAX_CONTACTS || !was_used(_contacts[id].get_first_name()))
         return (false);
     std::cout << YELLOW << "First name: " << _contacts[id].get_first_name() << std::endl;
     std::cout << "Last name: " << _contacts[id].get_last_name() << std::endl;
