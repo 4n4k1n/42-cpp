@@ -1,5 +1,6 @@
 #include "HumanB.hpp"
 #include <iostream>
+#include "color.hpp"
 
 HumanB::HumanB(const std::string &name) : _name(name) {}
 
@@ -10,5 +11,5 @@ void	HumanB::setWeapon(Weapon &weapon)
 
 void	HumanB::attack(void)
 {
-	std::cout << _name << "attacks with their" << _weapon->getType() << std::endl;
+	std::cout << RED << _name << GREEN << " attacks with their " << RED << _weapon->getType() << RESET << std::endl;
 }
