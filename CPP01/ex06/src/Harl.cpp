@@ -8,9 +8,18 @@ void Harl::complain(std::string level)
 	{
         if (_levels[i] == level)
 		{
-            (this->*_funcs[i])();
-			if (level != _levels[3])
-				this->complain(_levels[i + 1]);
+			switch (i)
+			{
+				case 0:
+					(this->*_funcs[0])();
+				case 1:
+					(this->*_funcs[1])();
+				case 2:
+					(this->*_funcs[2])();
+				case 3:
+					(this->*_funcs[3])();
+					break;
+			}
             return;
         }
     }
