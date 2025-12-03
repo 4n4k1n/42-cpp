@@ -4,28 +4,33 @@
 
 Fixed::Fixed() : _fixed_point_value(0)
 {
-	std::cout << GREEN << "Default constructor called" << RESET << std::endl;
+	if (PRINT)
+		std::cout << GREEN << "Default constructor called" << RESET << std::endl;
 }
 
 Fixed::Fixed(const int fix_int) : _fixed_point_value(fix_int << _fractional_bits)
 {
-	std::cout << GREEN << "Int constructor called" << RESET << std::endl;
+	if (PRINT)
+		std::cout << GREEN << "Int constructor called" << RESET << std::endl;
 }
 
 Fixed::Fixed(const float fix_float) : _fixed_point_value(static_cast<int>(roundf(fix_float * (1 << _fractional_bits))))
 {
-	std::cout << GREEN << "Float constructor called" << RESET << std::endl;
+	if (PRINT)
+		std::cout << GREEN << "Float constructor called" << RESET << std::endl;
 }
 
 Fixed::Fixed(const Fixed &other)
 {
-	std::cout << GREEN << "Copy constructor called" << RESET << std::endl;
+	if (PRINT)
+		std::cout << GREEN << "Copy constructor called" << RESET << std::endl;
 	*this = other;
 }
 
 Fixed &Fixed::operator=(const Fixed &other)
 {
-	std::cout << GREEN << "Copy assignment operator called" << RESET << std::endl;
+	if (PRINT)
+		std::cout << GREEN << "Copy assignment operator called" << RESET << std::endl;
 	if (this != &other)
 		this->_fixed_point_value = other.getRawBits();
 	return (*this);
@@ -33,12 +38,14 @@ Fixed &Fixed::operator=(const Fixed &other)
 
 Fixed::~Fixed()
 {
-	std::cout << YELLOW << "Destructor called" << RESET << std::endl;
+	if (PRINT)
+		std::cout << YELLOW << "Destructor called" << RESET << std::endl;
 }
 
 int Fixed::getRawBits() const
 {
-	std::cout << MAGENTA << "getRawBits member function called" << RESET << std::endl;
+	if (PRINT)
+		std::cout << MAGENTA << "getRawBits member function called" << RESET << std::endl;
 	return (this->_fixed_point_value);
 }
 

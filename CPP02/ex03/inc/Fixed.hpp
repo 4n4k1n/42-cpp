@@ -1,6 +1,8 @@
 #pragma once
 #include <iostream>
 
+# define PRINT false
+
 class Fixed
 {
 	private:
