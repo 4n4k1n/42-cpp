@@ -6,6 +6,11 @@ Zombie::Zombie(const std::string &name) : _name(name) {}
 
 Zombie::Zombie() : _name("Zombie") {}
 
+Zombie::~Zombie()
+{
+	std::cout << RED << _name << " has been destroyed" << RESET << std::endl;
+}
+
 void	Zombie::setName(const std::string &name)
 {
 	_name = name;

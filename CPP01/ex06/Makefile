@@ -11,7 +11,7 @@ SRC :=	main.cpp \
 
 OBJDIR := obj
 OBJ := $(addprefix $(OBJDIR)/,$(SRC:.cpp=.o))
-BIN := program
+BIN := HarlFilter 
 
 # Colors
 CYAN = \033[0;96m
